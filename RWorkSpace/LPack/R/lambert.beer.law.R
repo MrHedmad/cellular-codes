@@ -15,7 +15,7 @@ lb.model <- function(conc, abs, inter = FALSE){
   # Calculate or not the model with the intercept
   if(inter == FALSE){
       lm(abs~conc-1) -> mo
-      print("Intercept is 0", quote = FALSE)
+      print("Intercept set to 0", quote = FALSE)
       print(c("Coefficient is", round(as.numeric(mo$coefficients), 5)),
             quote = FALSE)
   }else{
