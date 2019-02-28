@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551366009167.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4031517592",
+    "id" : "B291433A",
+    "lastKnownWriteTime" : 1551367570,
+    "last_content_update" : 1551367570064,
+    "path" : "C:/Users/hedma/Data/RWorkSpace/Statistics/ISLR Exercises.R",
+    "project_path" : "ISLR Exercises.R",
+    "properties" : {
+        "cursorPosition" : "37,0",
+        "scrollLine" : "18",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
