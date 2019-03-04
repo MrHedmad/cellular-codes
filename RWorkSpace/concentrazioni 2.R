@@ -6,7 +6,7 @@ curva <- data.frame(
   abs.4 = c(0.481, 0.854, 1.079, 1.398, 1.778)
 )
 
-sample <- data.frame(
+analyze(sample <- data.frame(
   labels = c("t1", "t3", "t5"),
   abs.1 = c(0.891, 1.249, 1.504),
   abs.2 = c(0.960, 1.249, 1.550),
