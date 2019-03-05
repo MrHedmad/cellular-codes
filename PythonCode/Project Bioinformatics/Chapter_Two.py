@@ -16,7 +16,7 @@ strings = np.array([
 
 # Implanted motif: "AAACCCTTT", but contains mutations in its sequence, so it
 # never actually appears in the strings.
-# How do we find this implated motif into these strings? This is the motif
+# How do we find this implanted motif into these strings? This is the motif
 # finding problem.
 
 # If we just concatenate the strings and search for a frequent pattern, we will
@@ -102,8 +102,8 @@ def score(motifs):
     # Implement an error if all strings are not of the same length??
     score = 0
     for a in range(0, len(motifs[0])):
-        # For each column (here i use the length of the first line to determine
-        # the column number:
+        # For each column (here I use the length of the first line to determine
+        # the column number):
         # Extract the corresponding column,
         col = "".join(motifs[:, a])
 
@@ -129,7 +129,7 @@ def consensus(motif):
 
 consensus(motifs)
 
-# Now that we found a way to score each motif, we will just nee dot find a
+# Now that we found a way to score each motif, we will just need to find a
 # collection of k-mere motifs from the strings, and select the collections
 # that minimize score(motifs).
 # We could generate each possible motif matrix and check them, but that would

@@ -35,7 +35,7 @@ def pattern_count(text, pattern):
 
 
 def frequent_words(text, k):
-    """Find the most freqnt k-mere in a string."""
+    """Find the most freqent k-mere in a string."""
     result = set()  # Using a set to remove duplicates from the result
     count = []
     for i in range(0, len(text) - k):
