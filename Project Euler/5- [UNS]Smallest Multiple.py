@@ -7,7 +7,9 @@ import prtools
 
 
 def _extract(input_list):
-    global terms
+    """Extract tuples from nested lists. This is inside the extract()
+     function"""
+    global terms  # Isn't this dangerous?
     for i in input_list:
         if type(i) is not tuple:
             _extract(i)
@@ -23,6 +25,7 @@ def extract(input_list):
 
 
 def recprdiv(a):
+    """Recursive prime division over each element in the list"""
     return [prtools.prdiv(x) for x in a]
 
 

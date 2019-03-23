@@ -4,3 +4,6 @@
 import prtools
 
 print(sum(prtools.prunder(2000000)))
+
+# This takes an enourmous amount of time. Should optimze prunder to only check
+# the new number by all the primes found below it already.

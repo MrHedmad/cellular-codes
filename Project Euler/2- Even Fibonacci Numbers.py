@@ -9,9 +9,12 @@
 
 def Fib(y):
     answ = [1, 2]
-    while answ[len(answ)-1] < y:
+
+    while answ[len(answ)-1] < y:  # The -1 is to follow python 0-indexing
         answ.append(answ[len(answ)-1] + answ[len(answ)-2])
-    even = [y for y in answ if y % 2 == 0]
+        # Access the last and second-last num, sum them together, and append
+
+    even = [k for k in answ if k % 2 == 0]
     print(sum(even))
 
 

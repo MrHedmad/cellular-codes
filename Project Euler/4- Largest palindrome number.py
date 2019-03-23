@@ -3,21 +3,16 @@
 #
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-a = 1234023
-a = str(a)
-b = list(a)
-
-print(b)
-len(b)
-
 
 def ispali(a):
     a = list(str(a))
+    # A list of characteris is more easely compared
     count = 0
-    length = len(a) // 2
+    length = len(a) // 2  # Find the length of half the string
 
     while count <= length:
         if a[count] == a[len(a) - count - 1]:
+            # Check if a and a-last digits are the same
             count += 1
         else:
             return False
@@ -26,5 +21,7 @@ def ispali(a):
 
 ispali(1234567890987554321)
 
-max([x * y for x in range(1, 999) for y in range(1, 999)
+max([[x * y, x, y] for x in range(1, 999) for y in range(1, 999)
      if ispali(x * y) is True])
+
+# Maybe start at the top and work down, stopping at the first one?

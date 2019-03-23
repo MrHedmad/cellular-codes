@@ -37,6 +37,7 @@ def prdiv(a):
 
 
 def prunder(max):
+    """Return all primes under a certain value in a list"""
     c = 0
     answ = []
     while c <= max:

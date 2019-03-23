@@ -30,6 +30,7 @@ series = [int(i) for i in series]
 
 
 def mult(a):
+    """Return the multiplication of every digit in the numerical list a"""
     result = 1
     for n in a:
         result = result * n
@@ -39,12 +40,15 @@ def mult(a):
 def largestproduct(series, length):
     last_product = 0
     current_position = 0
+
     while current_position + length < len(series):
+        # Slide a window down the length and record the largest mult(a)
         curr_product = mult(series[current_position: current_position +
                                    length])
         if curr_product > last_product:
             last_product = curr_product
         current_position += 1
+
     return last_product
 
 

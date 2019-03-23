@@ -12,11 +12,16 @@
 
 
 def sumsqdiff(x):
+    """Find the difference between the sum of the squares and the square of the
+     sum."""
+    # I have no idea of the efficiency of this
     nums = range(1, x+1)
     squares = []
     sums = sum(nums)**2
+
     for n in nums:
         squares.append(n**2)
+
     squares = sum(squares)
     return sums - squares
 

@@ -8,10 +8,7 @@ def Mult(y):
     answ = []
     x = 0
     while x < y:
-        if x % 5 == 0:
-            answ.append(x)
-            x += 1
-        elif x % 3 == 0:
+        if x % 5 == 0 or x % 3 == 0:  # If either is true, append
             answ.append(x)
             x += 1
         else:
