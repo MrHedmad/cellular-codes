@@ -25,7 +25,7 @@ strings = np.array([
 # fail.
 
 # We will actually search for k-meres in each t string, construct a t x k
-# motif matrix, and then score each column by finding the msot common
+# motif matrix, and then score each column by finding the most common
 # nucleotide and counting every mismatch. If we get a tie, we break it
 # randomly. The sum of the scores of each column is score(motifs).
 

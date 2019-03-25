@@ -47,3 +47,27 @@ def prunder(max):
         else:
             c += 1
     return answ
+
+# Under implementation. Do not use
+
+
+def b_prunder(number):
+    import math
+    c = 5
+    primes = [2, 3]
+
+    while c <= number:
+        for prime in primes:
+            if math.ceil(math.sqrt(c)) % prime != 0:
+                pass
+            else:
+                break
+        else:
+            primes.append(c)
+
+        c += 2
+
+    return primes
+    # this works up to 200k. When trying to do it for 2000k, it stops working
+
+b_prunder(2000000)
