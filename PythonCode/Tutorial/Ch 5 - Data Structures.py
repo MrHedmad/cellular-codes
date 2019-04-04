@@ -172,9 +172,8 @@ c
 # on the right (inside the tuple).
 
 
-# ############################################################################
-# ############################### 3 - Sets ###################################
-# ############################################################################
+# 3 - Sets
+
 
 # Sets are unordered, undiplicated groups of items. They can be made using the
 # set() function or curly braces:
@@ -260,3 +259,35 @@ for i, l in enumerate(tuple):
     print(i, l)
 
 # 5 - Conditions and Sequence comparisons.
+
+# While and if can contain all operators, not just comparisons.
+# For example, in and not in check if a value is in a sequence, and is and
+# is not can check if two (mutable) objects are the same.
+# Comparisons may be further combined using "not", "and" and "or", compared in
+# that order: A and not B or C is the same as (A and (not B)) or C.
+# And and Or are short-circuit operators: they are evaluated left to right and
+# the evaluation stops as soon as a true relationship is found.
+
+# Comparing sequences occurs in order. The first two items are compared, then
+# the next, and so on. The comparison continues if the two items are the same
+# and *immediately stops* if it finds a difference, returning that difference.
+# Lexicographical ordering following the UNICODE convention is used to compare
+# non-numbers.
+# As long as the two objects have a comparison method defined, every type of
+# object can be compared. If no method is present, TypeError is raised.
+
+(1, 2, 3) < (1, 2, 4)
+[1, 2, 3] < [1, 2, 4]
+'ABC' < 'C' < 'Pascal' < 'Python'
+(1, 2, 3, 4) < (1, 2, 4)
+(1, 2) < (1, 2, -1)
+(1, 2, 3) == (1.0, 2.0, 3.0)
+(1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4)  # The test is recursive
+
+# These are all true.
+
+[1, 2, 3, 100] < [1, 2, 4, 5]
+# Same, Same, Smaller than -> Return True
+
+[100, 1, 1, 1] < [1, 100, 100, 100]
+# False -> Return False

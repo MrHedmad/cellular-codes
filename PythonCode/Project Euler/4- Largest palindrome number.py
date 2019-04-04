@@ -6,7 +6,7 @@
 
 def ispali(a):
     a = list(str(a))
-    # A list of characteris is more easely compared
+    # A list of characters is more easely compared
     count = 0
     length = len(a) // 2  # Find the length of half the string
 

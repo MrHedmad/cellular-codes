@@ -58,7 +58,7 @@ def b_prunder(number):
 
     while c <= number:
         for prime in primes:
-            if math.ceil(math.sqrt(c)) % prime != 0:
+            if c % prime != 0:
                 pass
             else:
                 break
@@ -70,4 +70,7 @@ def b_prunder(number):
     return primes
     # this works up to 200k. When trying to do it for 2000k, it stops working
 
-b_prunder(2000000)
+
+sum(prunder(2000000))
+
+prdiv(1236)
