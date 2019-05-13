@@ -9,13 +9,16 @@
     "id" : "378AD7BC",
     "lastKnownWriteTime" : 1543786475,
     "last_content_update" : 1543786475785,
-    "path" : "C:/Users/hedma/Data/RWorkSpace/Tutorial/Exercises.R",
+    "path" : "C:/Users/hedma/Data/cellular-codes/RWorkSpace/Tutorial/Exercises.R",
     "project_path" : "Exercises.R",
     "properties" : {
         "cursorPosition" : "211,48",
         "scrollLine" : "200",
         "tempName" : "Untitled1"
     },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
     "relative_order" : 8,
     "source_on_save" : false,
     "source_window" : "",

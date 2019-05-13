@@ -9,13 +9,16 @@
     "id" : "B291433A",
     "lastKnownWriteTime" : 1551367570,
     "last_content_update" : 1551367570064,
-    "path" : "C:/Users/hedma/Data/RWorkSpace/Statistics/ISLR Exercises.R",
+    "path" : "C:/Users/hedma/Data/cellular-codes/RWorkSpace/Statistics/ISLR Exercises.R",
     "project_path" : "ISLR Exercises.R",
     "properties" : {
         "cursorPosition" : "37,0",
         "scrollLine" : "18",
         "tempName" : "Untitled1"
     },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
     "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
