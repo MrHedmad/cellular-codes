@@ -21,9 +21,7 @@ def DPChange(money, coin):
     import math
 
     minNumCoins = [0] * money
-    print(len(minNumCoins))
     for m in range(1, money):
-        print(minNumCoins[m])
         minNumCoins[m] = math.inf
         for i in range(0, len(coin) - 1):
             if m >= coin[i] and minNumCoins[m - coin[i]] + 1 < minNumCoins[m]:
