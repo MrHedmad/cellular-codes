@@ -52,11 +52,11 @@ def prunder(max):
 
 
 def b_prunder(number):
-    import math
+    import tqdm
     c = 5
     primes = [2, 3]
 
-    while c <= number:
+    for c in tqdm(range(1, number)):
         for prime in primes:
             if c % prime != 0:
                 pass

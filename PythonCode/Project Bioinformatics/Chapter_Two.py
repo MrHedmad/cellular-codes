@@ -62,8 +62,6 @@ def countnucl(pattern, out=False):
         out = out.lower()
     elif out is bool:
         pass
-    else:
-        raise ValueError
 
     # The freq array follows A C G T.
     frequency = {}

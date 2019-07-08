@@ -166,3 +166,6 @@ dmypy.json
 
 # Pickle
 .pickle
+
+# PyCharm
+.idea/
