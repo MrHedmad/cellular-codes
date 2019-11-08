@@ -7,7 +7,7 @@
 # The basic data storage object is the vector
 # The chain c() command creates a vector:
 
-c(1,2,3,4,5) # vector containing the number 1 to 5
+c(1,2,3,4,5) # vector containing the number 1 to 5 
 c("This is a vector", "Containing only", "Character entities")
 c('I\'m very hungry') # Quotes are escaped with \, but \\ is printed as "\\".
 
@@ -156,6 +156,10 @@ x > 2 & x < 6 # Where x is more than 2 and less than 6: F F Tr Tr Tr F F F F F
 
 # You can use logic expressions to select stuff inside objects
 # TRUE are kept, FALSE are omitted:
+
+b <- 1:6
+b[c(TRUE, TRUE, FALSE)]
+b[b>=4]
 
 x <- c(1, 2, 3, 4, 5, NA, NA, 8, 9, NaN, 11)
 x[!is.na(x)] # Is a new vector, with: 1 2 3 4 5 8 9 11

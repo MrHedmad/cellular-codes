@@ -1,0 +1,30 @@
+<CustomGrid>
+
+    name: name_id
+    email: email_id
+
+    GridLayout:
+        cols: 1
+        size: root.width - 100, root.height - 100
+        pos: 50, 50
+
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Name: "
+
+            TextInput:
+                id: name_id
+                multiline: False
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                id: email_id
+                multiline: False
+
+
+        Button:
+            text: "Submit"
+            on_press: root.button()

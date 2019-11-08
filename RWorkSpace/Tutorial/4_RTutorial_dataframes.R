@@ -59,3 +59,15 @@ summary(iris)
 data(CO2)
 subset(CO2, CO2$Type == "Quebec")
 subset(CO2, CO2$Type == "Quebec" & CO2$Treatment == "nonchilled")
+
+data(iris)
+
+iris
+head(iris)
+str(iris)
+
+iris[,"Sepal.Length"]
+iris[c(1,12,34),c(1, 4)]
+iris$Sepal.Length[c(1,12,34)]
+
+min(iris$Petal.Length)

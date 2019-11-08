@@ -1,0 +1,61 @@
+Root
+    MeltVCF:
+        Variables:
+            input file [Text box] > str
+            ? suffix [Text box] > str
+            ? divide somatic [BOOL]
+
+    Extract CHASM:
+        Variables:
+            folder_in [Text box] > str
+            folder_out [Text box] > str
+            variable [choice] > str:
+                pvalue, FDR, score
+            value [Text Box] > float
+            filter_tum [Bool]
+
+    Crystallize:
+        Variables:
+            directory [Text box] > str
+            ? where [Text box] > str
+
+    Co_occurrence:
+        Variables:
+            data_path [Text box] > str
+            ? out_path [Text box] > str
+            ? calc_p_value
+            ? rep [Text box] > int
+            ? alpha [Text box] > float
+            ? tail [Choice] > str:
+                right, left
+            ? correct_pvalues [Bool]
+            ? cut_low_expression [Text Box] > float
+
+    Advanced:
+        ExtractChasm:
+            Types:
+                Normal:
+                    Variables:
+                        file_in [Text box]
+                        ? file_out [Text box]
+                        Advanced [Bool]:
+                            ? select_variant [Text Box / Load > menu]:
+                                Columns
+                                Filters
+                            ? select_additional [Text Box / Load > menu]:
+                                Columns
+                                Filters
+                            ? skip_rows [Text box]
+                            ? rename_hugo [Bool]
+                Plus:
+                    Variables:
+                        file_in [Text box]
+                        ? file_out [Text box]
+                        Advanced [Bool]:
+                            ? select [Text box / Load > menu]:
+                                Columns
+                                Filters
+                            ? skip_rows
+                            ? rename_hugo
+                            ? adjust_pval
+                            ? drop_na_cols

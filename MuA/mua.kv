@@ -1,0 +1,150 @@
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+<WindowManager>:
+    IntroductionWindow:
+    MeltVCFWindow:
+    ExtractChasmWindow:
+    CrystalWindow:
+    CoOccurrenceWindow:
+    AdvancedWindow:
+
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<ColoredLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+
+
+<ScreenSwitcher>:
+    cols: 1
+    size_hint_x: 0.2
+
+    Button:
+        text: "General"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "introductionWindow"
+    Button:
+        text:"meltvcf"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "meltvcfWindow"
+    Button:
+        text:"extractchasm"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "extractchasmWindow"
+    Button:
+        text:"crystal"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "crystalWindow"
+    Button:
+        text:"occurrence"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "cooccurrenceWindow"
+    Button:
+        text:"advanced"
+        on_release:
+            app.root.transition= NoTransition()
+            app.root.current = "advancedWindow"
+
+<MenuGrid@GridLayout>:
+    cols: 2
+    padding: 5
+    row_default_height: 40
+    ScreenSwitcher:
+
+<IntroductionWindow>:
+    name: "introductionWindow"
+    MenuGrid:
+        Label:
+            text:"Window 1"
+
+<MeltVCFWindow>:
+    name: "meltvcfWindow"
+    MenuGrid:
+        GridLayout:
+            rows: 5
+            padding: 5
+            spacing: 20
+
+            ColoredLabel:
+                text: "Melt VCF"
+                size_hint_y: .20
+                background_color: 0, 1, 0, 1
+
+            ColoredLabel:
+                text: "Description of Melt VCF"
+                size_hint_y: 1.60
+                background_color: 1, 0, 0, 1
+
+            GridLayout:
+                cols: 2
+                rows: 3
+                spacing: 10
+
+                ColoredLabel:
+                    text: "Input File"
+                    background_color: 1, 0, 0, 1
+                    size_hint_x: .2
+                TextInput:
+                    id: meltvcf_input_file
+                    multiline: False
+
+                Label:
+                    text: "Suffix"
+                    size_hint_x: .2
+                TextInput:
+                    id: meltvcf_input_file
+                    multiline: False
+
+                Label:
+                    text: "Divide somatic?"
+                    size_hint_x: .2
+                CheckBox:
+
+            GridLayout:
+                cols: 3
+                padding: 10
+
+                Button:
+                    text: "Clear fields"
+                Button:
+                    text: "Run!"
+                Button:
+                    text: "Show Docs"
+
+            Label:
+                text: "ProgressBarPlaceholder"
+
+<ExtractChasmWindow>:
+    name: "extractchasmWindow"
+    MenuGrid:
+        Label:
+            text:"Window 3"
+
+<CrystalWindow>:
+    name: "crystalWindow"
+    MenuGrid:
+        Label:
+            text:"Window 4"
+
+<CoOccurrenceWindow>:
+    name: "cooccurrenceWindow"
+    MenuGrid:
+        Label:
+            text:"Window 5"
+
+<AdvancedWindow>:
+    name: "advancedWindow"
+    MenuGrid:
+        Label:
+            text:"Window 6"
